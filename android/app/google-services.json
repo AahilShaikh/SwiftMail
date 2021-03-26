@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "844004512126",
+    "project_id": "swift-mail",
+    "storage_bucket": "swift-mail.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844004512126:android:a450a780cc7e497bfca32f",
+        "android_client_info": {
+          "package_name": "com.swiftmail.swift_mail"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844004512126-gd45v1aq6p6mfndnji657alcnbrn8ti3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6o9dyxp19lb-lxAO2FwMVKVpItpjrCpM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844004512126-gd45v1aq6p6mfndnji657alcnbrn8ti3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
