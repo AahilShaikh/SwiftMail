@@ -10,7 +10,7 @@ class BackgroundPainter extends CustomPainter{
 
   BackgroundPainter({Animation<double> animation}) :
       darkGreenPaint = Paint()..color = Palette.darkGreen..style = PaintingStyle.fill,
-      greenPaint = Paint()..color = Palette.green..style = PaintingStyle.fill,
+      greenPaint = Paint()..color = Palette.blue..style = PaintingStyle.fill,
       goldPaint = Paint()..color = Palette.gold..style = PaintingStyle.fill,
       linePaint = Paint()..color = Palette.lightGreen..style = PaintingStyle.stroke..strokeWidth = 4,
       liquidAnim = CurvedAnimation(

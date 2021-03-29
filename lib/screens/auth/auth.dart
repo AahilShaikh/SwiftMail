@@ -90,14 +90,12 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
                       child: value ? SignIn(
                         key: ValueKey('SignIn'),
                         onRegisteredCallback: (){
-                          context.resetSignInForm();
                           showSignInPage.value = false;
                           _controller.forward();
                         },
                       ): Register(
                         key: ValueKey('Register'),
                         onSignInPressed: (){
-                          context.resetSignInForm();
                           showSignInPage.value = true;
                           _controller.reverse();
                         },

@@ -15,6 +15,7 @@ class UserEmails{
 }
 
 
+
 class DB{
   var user = FirebaseAuth.instance.currentUser;
   final _db = FirebaseFirestore.instance;

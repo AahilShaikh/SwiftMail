@@ -4,14 +4,20 @@ import 'package:lit_firebase_auth/lit_firebase_auth.dart';
 import 'package:swift_mail/screens/auth/sign_in_up_bar.dart';
 import 'package:swift_mail/screens/auth/title.dart';
 
+
 import '../../palette.dart';
 import 'decoration_functions.dart';
 
-class SignIn extends StatelessWidget{
+class SignIn extends StatefulWidget{
   const SignIn({Key key, @required this.onRegisteredCallback}) : super(key: key);
 
   final VoidCallback onRegisteredCallback;
 
+  @override
+  _SignInState createState() => _SignInState();
+}
+
+class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     final isSubmitting = context.isSubmitting();
@@ -37,7 +43,9 @@ class SignIn extends StatelessWidget{
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 16.0),
                     child: EmailTextFormField(
-                      decoration: signInInputDecoration(hintText: 'Email'),
+                      decoration: signInInputDecoration(
+                        hintText: 'Email',
+                      ),
                     ),
                   ),
                   Padding(
@@ -58,7 +66,7 @@ class SignIn extends StatelessWidget{
                     child: InkWell(
                       splashColor: Colors.white,
                       onTap: (){
-                        onRegisteredCallback?.call();
+                        widget.onRegisteredCallback?.call();
                     },
                       child: const Text(
                         'Sign Up',
@@ -79,5 +87,4 @@ class SignIn extends StatelessWidget{
       ),
     );
   }
-
 }

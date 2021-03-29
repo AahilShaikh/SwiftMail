@@ -125,7 +125,7 @@ class _RoundContinueButton extends StatelessWidget {
       onPressed: onPressed,
       elevation: 0.0,
       fillColor: Palette.darkGreen,
-      splashColor: Palette.green,
+      splashColor: Palette.blue,
       padding: const EdgeInsets.all(22.0),
       shape: const CircleBorder(),
       child: const Icon(

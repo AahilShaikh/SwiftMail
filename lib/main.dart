@@ -22,22 +22,21 @@ class App extends StatelessWidget {
         child: MultiProvider(
           providers: [
             StreamProvider<UserEmails>.value(catchError: (_, __) => UserEmails(emails: [{'Status' : 'Loading'}]), initialData: UserEmails(emails: [{'Status': 'Loading'}]), value: DB().emails),
-
           ],
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'Scouting App',
             theme: ThemeData(
                 visualDensity: VisualDensity.adaptivePlatformDensity,
-                accentColor: Palette.darkGreen,
+                secondaryHeaderColor: Palette.blue,
                 appBarTheme: const AppBarTheme(
                   brightness: Brightness.dark,
-                  color: Palette.darkGreen,
+                  color: Palette.blue,
 
                 ),
 
                 snackBarTheme: const SnackBarThemeData(
-                    backgroundColor: Palette.darkGreen
+                    backgroundColor: Palette.blue
                 )
             ),
             //Splash screen switches between Home or AuthScreen based on whether signed in with a transition

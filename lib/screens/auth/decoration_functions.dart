@@ -35,11 +35,11 @@ InputDecoration signInInputDecoration({String hintText}) {
       borderSide: BorderSide(color: Palette.darkGreen),
     ),
     errorBorder: const UnderlineInputBorder(
-      borderSide: BorderSide(color: Palette.green),
+      borderSide: BorderSide(color: Palette.blue),
     ),
     focusedErrorBorder: const UnderlineInputBorder(
-      borderSide: BorderSide(width: 2.0, color: Palette.green),
+      borderSide: BorderSide(width: 2.0, color: Palette.blue),
     ),
-    errorStyle: const TextStyle(color: Palette.green),
+    errorStyle: const TextStyle(color: Palette.blue),
   );
 }
