@@ -8,6 +8,7 @@ import 'package:swift_mail/palette.dart';
 import 'package:swift_mail/screens/splash.dart';
 import 'package:provider/provider.dart';
 
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -16,12 +17,15 @@ void main() async {
 
 class App extends StatelessWidget {
   // Create the initialization Future outside of `build`:
+
   @override
   Widget build(BuildContext context) {
     return LitAuthInit(
         child: MultiProvider(
+
           providers: [
             StreamProvider<UserEmails>.value(catchError: (_, __) => UserEmails(emails: [{'Status' : 'Loading'}]), initialData: UserEmails(emails: [{'Status': 'Loading'}]), value: DB().emails),
+
           ],
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
@@ -32,12 +36,15 @@ class App extends StatelessWidget {
                 appBarTheme: const AppBarTheme(
                   brightness: Brightness.dark,
                   color: Palette.blue,
-
                 ),
 
                 snackBarTheme: const SnackBarThemeData(
                     backgroundColor: Palette.blue
                 )
+            ),
+            darkTheme: ThemeData(
+              brightness: Brightness.dark,
+              primarySwatch: Colors.blue
             ),
             //Splash screen switches between Home or AuthScreen based on whether signed in with a transition
             home: SplashScreen(),

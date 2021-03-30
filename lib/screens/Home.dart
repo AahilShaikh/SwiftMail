@@ -2,15 +2,14 @@ import 'dart:math';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:lit_firebase_auth/lit_firebase_auth.dart';
 import 'package:swift_mail/dataManager.dart';
 import 'package:intl/intl.dart';
 import 'package:swift_mail/palette.dart';
+import 'package:swift_mail/screens/account.dart';
 import 'package:swift_mail/screens/emailViewer.dart';
 import 'package:swift_mail/screens/newEmail.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-import 'auth/auth.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget{
@@ -42,11 +41,7 @@ class _HomePageState extends State<HomePage> {
         title: Text('Swift Mail'),
       ),
       drawer: Drawer(
-        // Add a ListView to the drawer. This ensures the user can scroll
-        // through the options in the drawer if there isn't enough vertical
-        // space to fit everything.
           child: ListView(
-            // Important: Remove any padding from the ListView.
             padding: EdgeInsets.zero,
             children: <Widget>[
               DrawerHeader(
@@ -70,9 +65,9 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
               ListTile(
-                title: Text('Settings'),
+                title: Text('Account Settings'),
                 onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomePage()));
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => AccountPage()));
                 },
               ),
             ],
@@ -87,17 +82,6 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Column(
         children: [
-          Container(
-            width: 100,
-            child: TextButton(
-              child: Text('Sign out', style: TextStyle(color: Colors.red),),
-              onPressed: (){
-                context.signOut();
-                Navigator.of(context).pop();
-                Navigator.of(context).push(AuthScreen.route);
-              },
-            ),
-          ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ListView.builder(
